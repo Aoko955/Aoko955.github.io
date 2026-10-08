@@ -517,6 +517,14 @@ button:focus-visible,
   margin-top: 0.15rem;
 }
 .pub-stars img { height: 22px; width: auto; display: block; }
+.pub-stars-native {
+  border: 1px solid currentColor;
+  border-radius: 4px;
+  padding: 0 7px;
+  font-size: 12px;
+  line-height: 20px;
+  text-decoration: none;
+}
 
 @media (max-width: 720px) {
   .pub-table, .pub-table tbody, .pub-table tr, .pub-table td { display: block; width: 100%; }

@@ -232,6 +232,21 @@ def render_html(config_text: str, body: str, *, for_publish: bool) -> str:
       window.addEventListener('scroll', onScroll, {{ passive: true }});
       onScroll();
 
+      document.querySelectorAll('[data-github-stars]').forEach(function (badge) {{
+        var repo = badge.getAttribute('data-github-stars');
+        fetch('https://api.github.com/repos/' + repo)
+          .then(function (response) {{
+            if (!response.ok) {{ throw new Error('GitHub API unavailable'); }}
+            return response.json();
+          }})
+          .then(function (data) {{
+            if (Number.isInteger(data.stargazers_count) && data.stargazers_count >= 0) {{
+              badge.textContent = data.stargazers_count.toLocaleString();
+            }}
+          }})
+          .catch(function () {{ /* Keep the Stars link if GitHub is unavailable. */ }});
+      }});
+
       document.getElementById('theme-toggle')?.addEventListener('click', function () {{
         var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
         document.documentElement.setAttribute('data-theme', next);
