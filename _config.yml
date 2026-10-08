@@ -18,7 +18,7 @@ author:
   avatar           : "images/avatar-scholar.jpg"
   bio              : "Ph.D. Student at HKUST"
   location         : "Hong Kong SAR"
-  cv               : "images/Resume.pdf"
+  cv               :
   employer         :
   pubmed           :
   googlescholar    : "https://scholar.google.com/citations?user=ZnKjHG0AAAAJ&hl=zh-CN"
