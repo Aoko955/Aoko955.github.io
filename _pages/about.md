@@ -71,7 +71,7 @@ redirect_from:
     <p class="pub-links-line">
       [<a href="https://arxiv.org/abs/2608.13602" target="_blank" rel="noopener">paper</a>]
       [<a href="https://github.com/Aoko955/Omni-LiveAvatar" target="_blank" rel="noopener">code</a>]
-      <a class="pub-stars pub-stars-native" target="_blank" rel="noopener" href="https://github.com/Aoko955/Omni-LiveAvatar" aria-label="Omni-LiveAvatar GitHub stars">★ <span data-github-stars="Aoko955/Omni-LiveAvatar">Stars</span></a>
+      <a class="pub-stars" target="_blank" rel="noopener" href="https://github.com/Aoko955/Omni-LiveAvatar"><img alt="GitHub stars" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Frepos%2FAoko955%2FOmni-LiveAvatar&amp;query=%24.stargazers_count&amp;style=social&amp;logo=github&amp;label=Stars"></a>
     </p>
   </td>
 </tr>
