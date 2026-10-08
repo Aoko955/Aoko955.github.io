@@ -1,0 +1,24 @@
+_site/
+push.sh
+.DS_Store
+.cursor/
+_template_jonbarron/
+
+# Local Ruby/Jekyll build artifacts (not needed for GitHub Pages)
+vendor/
+.bundle/
+.jekyll-cache/
+.jekyll-metadata
+
+# Local preview / uploads (not needed on GitHub Pages)
+preview.html
+build_preview.py
+preview.sh
+extract_pub_figures.py
+SETUP-zh.md
+CV (2).pdf
+salt++.png
+enhance.png
+ge.png
+HITSZ.png
+SalQ-VLM.png

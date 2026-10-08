@@ -1,0 +1,194 @@
+---
+layout: compress
+---
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>{{ site.title }}</title>
+    <meta name="author" content="{{ site.author.name | escape }}">
+    <meta name="description" content="{{ site.author.name }} — {{ site.author.bio }}. Homepage with research, publications, and projects.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Open Graph (link preview for WeChat / Slack / LinkedIn, etc.) -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="{{ site.author.name }}">
+    <meta property="og:title" content="{{ site.title }}">
+    <meta property="og:description" content="{{ site.author.bio }}">
+    <meta property="og:url" content="{{ site.url | append: site.baseurl | append: '/' }}">
+    <meta property="og:image" content="{{ site.url | append: site.baseurl | append: '/images/og-image.png' }}?v={{ site.time | date: '%s' }}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    {% if site.google_analytics_id %}
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics_id }}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', '{{ site.google_analytics_id }}');
+    </script>
+    {% endif %}
+
+    <!-- Set theme before paint to avoid flash -->
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('theme') ||
+            (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+          document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {}
+      })();
+    </script>
+
+    <link rel="icon" href="/images/favicon.ico?v={{ site.time | date: '%s' }}" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png?v={{ site.time | date: '%s' }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png?v={{ site.time | date: '%s' }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v={{ site.time | date: '%s' }}">
+    <meta name="theme-color" content="#234e8c" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0e131a" media="(prefers-color-scheme: dark)">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..600&display=swap">
+    <link rel="stylesheet" type="text/css" href="/stylesheet.css?v={{ site.time | date: '%s' }}">
+    <link rel="stylesheet" type="text/css" href="/jon-extra.css?v={{ site.time | date: '%s' }}">
+    <link rel="stylesheet" href="/assets/css/academicons.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- MathJax (restore LaTeX rendering used by the previous Jekyll theme) -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } });
+    </script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script>
+  </head>
+
+  <body>
+    <!-- Sticky top navigation -->
+    <header class="site-nav" id="site-nav">
+      <div class="site-nav__inner">
+        <a class="site-nav__brand" href="#top">{{ site.author.name }}</a>
+        <div class="site-nav__right">
+          <nav class="site-nav__links" aria-label="Primary">
+            <a href="#about-me">About</a>
+            <a href="#-news">News</a>
+            <a href="#-publications">Publications</a>
+            <a href="#-educations">Education</a>
+            <a href="#-experience">Experience</a>
+          </nav>
+          <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle light / dark">
+            <i class="fas fa-moon" aria-hidden="true"></i><i class="fas fa-sun" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="wrap" id="top">
+      <!-- Hero / profile header -->
+      <section class="hero">
+        <div class="hero__text">
+          <h1 class="hero__name">{{ site.author.name }}{% if site.author.name_cn %} <span class="hero__name-cn">{{ site.author.name_cn }}</span>{% endif %}</h1>
+          {% if site.author.bio %}<p class="hero__role">{{ site.author.bio }}</p>{% endif %}
+          {% if site.author.location %}<p class="hero__loc"><i class="fas fa-location-dot"></i> {{ site.author.location }}</p>{% endif %}
+
+          <div class="hero__links">
+            {% if site.author.email %}<a href="mailto:{{ site.author.email }}"><i class="fas fa-envelope"></i> Email</a>{% endif %}
+            {% if site.author.googlescholar %}<a href="{{ site.author.googlescholar }}" target="_blank" rel="noopener"><i class="ai ai-google-scholar"></i> Scholar</a>{% endif %}
+            {% if site.author.github %}<a href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>{% endif %}
+            {% if site.author.twitter %}<a href="https://x.com/{{ site.author.twitter }}" target="_blank" rel="noopener"><i class="fab fa-x-twitter"></i> X</a>{% endif %}
+            {% if site.author.linkedin %}<a href="https://www.linkedin.com/in/{{ site.author.linkedin }}" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a>{% endif %}
+            {% if site.author.cv %}<a href="/{{ site.author.cv }}?v={{ site.time | date: '%s' }}" target="_blank" rel="noopener"><i class="fas fa-file-lines"></i> CV</a>{% endif %}
+          </div>
+        </div>
+
+        {% if site.author.avatar %}
+        <div class="hero__photo">
+          <img src="/{{ site.author.avatar }}" alt="{{ site.author.name }}">
+        </div>
+        {% endif %}
+      </section>
+
+      <!-- Page content (about.md) -->
+      <div class="content">
+        {{ content }}
+      </div>
+
+      <footer class="site-footer">
+        <p>&copy; {{ site.time | date: "%Y" }} {{ site.author.name }}. Built with Jekyll. Last updated {{ site.time | date: "%b %Y" }}.</p>
+      </footer>
+    </main>
+
+    <a href="#top" class="to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      (function () {
+        // Sticky nav: shrink on scroll + highlight current section
+        var nav = document.getElementById('site-nav');
+        var sections = ['about-me', '-news', '-publications', '-educations', '-experience']
+          .map(function (id) { return document.getElementById(id); })
+          .filter(Boolean);
+        var navLinks = Array.prototype.slice.call(document.querySelectorAll('.site-nav__links a'));
+
+        function onScroll() {
+          if (window.scrollY > 24) { nav.classList.add('is-scrolled'); }
+          else { nav.classList.remove('is-scrolled'); }
+
+          var current = '';
+          var probe = window.scrollY + 120;
+          sections.forEach(function (sec) {
+            if (sec.offsetTop <= probe) { current = sec.id; }
+          });
+          navLinks.forEach(function (link) {
+            var active = link.getAttribute('href') === '#' + current;
+            link.classList.toggle('is-active', active);
+            if (active) { link.setAttribute('aria-current', 'true'); }
+            else { link.removeAttribute('aria-current'); }
+          });
+
+          var toTop = document.querySelector('.to-top');
+          if (toTop) { toTop.classList.toggle('is-visible', window.scrollY > 600); }
+        }
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+
+        // Dark-mode toggle
+        var themeBtn = document.getElementById('theme-toggle');
+        if (themeBtn) {
+          var syncPressed = function () {
+            themeBtn.setAttribute('aria-pressed',
+              document.documentElement.getAttribute('data-theme') === 'dark' ? 'true' : 'false');
+          };
+          syncPressed();
+          themeBtn.addEventListener('click', function () {
+            var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', next);
+            try { localStorage.setItem('theme', next); } catch (e) {}
+            syncPressed();
+          });
+        }
+
+        // Fade-in on scroll (skip under reduced-motion / no IO support)
+        var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (!reduce && 'IntersectionObserver' in window) {
+          var revealEls = [].slice.call(document.querySelectorAll('.content h1, .paper-box, .pub-row, .cv-item, .news-box'));
+          document.documentElement.classList.add('has-motion');
+          revealEls.forEach(function (el) { el.classList.add('reveal'); });
+          var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (en) {
+              if (en.isIntersecting) { en.target.classList.add('is-in'); io.unobserve(en.target); }
+            });
+          }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+          revealEls.forEach(function (el) { io.observe(el); });
+        }
+      })();
+    </script>
+  </body>
+</html>

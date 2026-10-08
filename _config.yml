@@ -1,0 +1,150 @@
+# Site Settings
+title                    : "Lunjie Zhu | HKUST"
+description              : "Ph.D. student at HKUST — efficient AI & world models"
+url                      : "https://aoko955.github.io"
+baseurl                  : ""
+repository               : "Aoko955/Aoko955.github.io"
+google_scholar_stats_use_cdn : true
+
+google_analytics_id      :
+
+google_site_verification :
+bing_site_verification   :
+baidu_site_verification  :
+
+author:
+  name             : "Lunjie Zhu"
+  name_cn          : "朱伦杰"
+  avatar           : "images/avatar-scholar.jpg"
+  bio              : "Ph.D. Student at HKUST"
+  location         : "Hong Kong SAR"
+  cv               : "images/Resume.pdf"
+  employer         :
+  pubmed           :
+  googlescholar    : "https://scholar.google.com/citations?user=ZnKjHG0AAAAJ&hl=zh-CN"
+  email            : "lzhubb@connect.ust.hk"
+  researchgate     :
+  uri              :
+  bitbucket        :
+  codepen          :
+  dribbble         :
+  flickr           :
+  facebook         :
+  foursquare       :
+  github           : "Aoko955"
+  google_plus      :
+  keybase          :
+  instagram        :
+  impactstory      :
+  lastfm           :
+  linkedin         :
+  dblp             :
+  orcid            :
+  pinterest        :
+  soundcloud       :
+  stackoverflow    :
+  steam            :
+  tumblr           :
+  twitter          :
+  vine             :
+  weibo            :
+  xing             :
+  youtube          :
+  wikipedia        :
+
+include:
+  - .htaccess
+  - _pages
+  - files
+exclude:
+  - docs
+  - google_scholar_crawler
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - .github
+  - CHANGELOG
+  - Capfile
+  - Gemfile
+  - Gruntfile.js
+  - LICENSE
+  - README
+  - Rakefile
+  - assets/js/_main.js
+  - assets/js/plugins
+  - assets/js/vendor
+  - config
+  - gulpfile.js
+  - log
+  - node_modules
+  - package.json
+  - tmp
+  - vendor
+  - SETUP-zh.md
+  - preview.html
+  - build_preview.py
+keep_files:
+  - .git
+  - .svn
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-redirect-from
+
+paginate: 5
+paginate_path: /page:num/
+
+feed:
+  path: atom.xml
+
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  startings: []
+  blanklines: false
+  profile: false
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: pages
+    values:
+      layout: default
+      author_profile: true
+
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
