@@ -12,7 +12,6 @@ vendor/
 
 # Local preview / uploads (not needed on GitHub Pages)
 preview.html
-build_preview.py
 preview.sh
 extract_pub_figures.py
 SETUP-zh.md
