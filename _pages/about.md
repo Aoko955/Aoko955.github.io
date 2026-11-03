@@ -13,7 +13,7 @@ redirect_from:
 
 <p>I am a Ph.D. student in Electronic and Computer Engineering at the Hong Kong University of Science and Technology (HKUST), advised by Prof. <a href="https://eejzhang.people.ust.hk/home.html">Jun Zhang</a>. I received my B.Eng. in Information Science and Technology from Harbin Institute of Technology, Shenzhen.</p>
 
-<p>My research focuses on building <strong>efficient and high-performing multimodal generative models</strong>. Currently, I explore few-step distillation, autoregressive distillation, and efficient architecture design for multimodal generative models. My prior work spans long-horizon, real-time streaming joint audio-video generation and video VAE decoder acceleration.</p>
+<p>My research focuses on building <strong>efficient and high-performing multimodal generative models</strong>. Currently, I explore scalable and high-fidelity pre-training architecture design for video generation foundation models, including pixel-space diffusion. My prior work spans long-horizon, real-time streaming joint audio-video generation, video VAE decoder acceleration, interactive world model and so on.</p>
 
 <p>I am always happy to chat about research and potential collaborations — feel free to <a href="mailto:lzhubb@connect.ust.hk">reach out</a>.</p>
 
@@ -23,6 +23,8 @@ redirect_from:
 # News
 
 <div class="news-box" markdown="1">
+- *2026.10*: &nbsp;Join <strong>ByteDance</strong> as a research intern.
+- *2026.10*: &nbsp;Our paper <strong>RIGen</strong> is released.
 - *2026.09*: &nbsp;Our papers <strong>Salt++</strong> and <strong>Radia</strong> are released.
 - *2026.08*: &nbsp;Our paper <strong>Omni-LiveAvatar</strong> is released.
 - *2026.05*: &nbsp;🎉 Our <strong>Flash-VAED</strong> is accepted by <strong>ICML 2026</strong>.
@@ -72,6 +74,24 @@ redirect_from:
       [<a href="https://arxiv.org/abs/2608.13602" target="_blank" rel="noopener">paper</a>]
       [<a href="https://github.com/Aoko955/Omni-LiveAvatar" target="_blank" rel="noopener">code</a>]
       <a class="pub-stars" target="_blank" rel="noopener" href="https://github.com/Aoko955/Omni-LiveAvatar"><img alt="GitHub stars" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Frepos%2FAoko955%2FOmni-LiveAvatar&amp;query=%24.stargazers_count&amp;style=social&amp;logo=github&amp;label=Stars"></a>
+    </p>
+  </td>
+</tr>
+<tr class="pub-spacer"><td colspan="2"></td></tr>
+
+<tr class="pub-row">
+  <td class="pub-thumb">
+    <img src="images/indexpics/2026_rigen.jpg?v={{ site.time | date: '%s' }}" width="285" alt="RIGen overview" loading="lazy" decoding="async">
+  </td>
+  <td class="pub-detail">
+    <p class="pub-title-line"><b>RIGen: Beyond Action Following with Reciprocal Interaction in Generative Gameplay</b></p>
+    <p class="pub-authors"><a href="https://murphylmf.github.io/" target="_blank" rel="noopener">Mengfei Li</a>, <a href="https://zhangyi-3.github.io/" target="_blank" rel="noopener">Yi Zhang</a>, <a href="https://xingtongge.github.io/" target="_blank" rel="noopener">Xingtong Ge</a>, <b>Lunjie Zhu</b>, <a href="https://github.com/rslinfy" target="_blank" rel="noopener">Fangyu Lin</a>, <a href="https://scholar.google.com/citations?hl=zh-CN&amp;user=8eTLCkwAAAAJ&amp;view_op=list_works&amp;sortby=pubdate" target="_blank" rel="noopener">Peng Li</a>, <a href="https://scholar.google.com/citations?user=Bd3v08QAAAAJ&amp;hl=zh-CN" target="_blank" rel="noopener">Guanglu Song</a>, <a href="https://scholar.google.com/citations?user=Lzb6A1sAAAAJ&amp;hl=zh-CN" target="_blank" rel="noopener">Yu Liu</a>, <a href="https://scholar.google.com/citations?user=77lSoywAAAAJ&amp;hl=en" target="_blank" rel="noopener">Wei Xue</a>, <a href="https://scholar.google.com/citations?user=g20Q12MAAAAJ&amp;hl=en" target="_blank" rel="noopener">Wenhan Luo</a>, <a href="https://scholar.google.com/citations?user=-0q6cIYAAAAJ&amp;hl=zh-CN" target="_blank" rel="noopener">Yike Guo</a></p>
+    <p class="pub-links-line">
+      [<a href="https://arxiv.org/abs/2610.20811" target="_blank" rel="noopener">paper</a>]
+      [<a href="https://murphylmf.github.io/RIGen/" target="_blank" rel="noopener">project</a>]
+      [<a href="https://github.com/murphylmf/RIGen" target="_blank" rel="noopener">code</a>]
+      [<a href="https://huggingface.co/Murphyyyy/RIGen" target="_blank" rel="noopener">models</a>]
+      <a class="pub-stars" target="_blank" rel="noopener" href="https://github.com/murphylmf/RIGen"><img alt="GitHub stars" src="https://img.shields.io/github/stars/murphylmf/RIGen?style=social"></a>
     </p>
   </td>
 </tr>
@@ -175,13 +195,21 @@ redirect_from:
 <div class="cv-list">
 
 <div class="cv-item">
+  <img class="cv-logo" src="images/logos/bytedance.png" alt="ByteDance">
+  <div class="cv-info">
+    <div class="cv-org">ByteDance · Research Intern</div>
+    <div class="cv-note">Pre-training architecture design for scalable, high-fidelity video generation foundation models.</div>
+  </div>
+  <div class="cv-date">2026.10 – Now</div>
+</div>
+
+<div class="cv-item">
   <img class="cv-logo" src="images/logos/vivix.png" alt="Vivix AI">
   <div class="cv-info">
     <div class="cv-org">Vivix AI · Latent Star Research Intern</div>
-    <div class="cv-role">Supervisor: <a href="https://zhangyi-3.github.io/" target="_blank" rel="noopener">Yi Zhang</a></div>
     <div class="cv-note">Efficient generative models — distillation-based acceleration for real-time / long-horizon joint audio-video generation.</div>
   </div>
-  <div class="cv-date">2026.04 – Now</div>
+  <div class="cv-date">2026.04 – 2026.10</div>
 </div>
 
 </div>
