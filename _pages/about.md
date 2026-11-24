@@ -178,15 +178,6 @@ redirect_from:
   <div class="cv-date">2021.09 – 2025.06</div>
 </div>
 
-<div class="cv-item">
-  <img class="cv-logo" src="images/logos/gz_no2.png" alt="Guangzhou No. 2 High School">
-  <div class="cv-info">
-    <div class="cv-org">Guangzhou No. 2 High School</div>
-    <div class="cv-role">Senior High School</div>
-  </div>
-  <div class="cv-date">2018.09 – 2021.06</div>
-</div>
-
 </div>
 
 <span class='anchor' id='-experience'></span>
